@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="YDG">
+    <title>Transition</title>
+    <style media="screen">
+      .box{
+        background-color: red;
+        color:white;
+        font-size: 50px;
+        /*Transition : focus , active, hover 에만 적용됨.*/
+        /*transition: background-color 0.5s ease-in-out; 백그라운드만 적용*/
+        transition: all 2.5s ease-in-out; /*모든 애니메이션 요소 적용*/
+      }
+      .box:active{
+        background-color: green;
+        color:blue;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="box">Text</span>
+  </body>
+</html>

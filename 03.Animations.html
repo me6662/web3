@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="YDG">
+    <title>Animations</title>
+    <style>
+
+      .box{
+        width:300px;
+        height:300px;
+        background-color: pink;
+        animation: 3s ScaleAndRotateSquare2 infinite ease-in-out;
+
+        font-size: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @keyframes ScaleAndRotateSquare {
+        from{
+          transform: none;
+        }
+        to{
+          transform: rotate(1turn) scale(.5,.5);
+        }
+      }
+      @keyframes ScaleAndRotateSquare2 {
+        0%{
+          transform: none;
+        }
+        50%{
+          transform: rotate(1turn) scale(.5,.5);
+          color:white;
+        }
+        100%{
+          transform: none;
+          color:gray;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">늠이시벌</div>
+
+  </body>
+</html>
