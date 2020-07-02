@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="YDG">
+    <title>Advanced CSS Recap</title>
+    <style media="screen">
+      html{
+        height:100%;
+        width:100%;
+        margin:0;
+        padding:0;
+      }
+      body{
+        height:400%;
+      }
+      .container1{
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 5px gray dashed;
+        padding-bottom: 20px;
+      }
+      .box1{
+        width:50px;
+        height:50px;
+        background: lightblue;
+        border: black 3px solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 20px;
+
+        transition: all 2.5s ease-in-out;
+      }
+      .box1:hover{
+        height: 300px;
+        background-color: pink;
+        color:red;
+
+      }
+      .container2{
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 5px gray dashed;
+        padding-top : 20px;
+        padding-bottom: 20px;
+      }
+      .box2{
+        background-color: lightgreen;
+        width: 300px;
+        height: 300px;
+      }
+      #rotate{
+        transition: transform .5s ease-in-out;
+      }
+      #skew{
+        transform: skew(5deg, 4deg)
+      }
+      #rotate:active{
+        transform: rotate(5turn) scale(0.5,0.5);
+      }
+
+      .container3{
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 5px gray dashed;
+        padding-top : 20px;
+        padding-bottom: 20px;
+      }
+
+      .box3{
+        background-color: pink;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 50px;
+
+        animation: 0.5s ScaleAndRotateSquare infinite ease-in-out;
+
+      }
+      @keyframes ScaleAndRotateSquare {
+        0%{
+          transform: none;
+        }
+        50%{
+          transform: rotate(1turn) scale(.5,.5);
+          color:white;
+        }
+        100%{
+          transform: none;
+          color:gray;
+        }
+      }
+
+      @media screen and (min-width:320px) and (max-width:640px){
+        @keyframes ScaleAndRotateSquare {
+          0%{
+            transform: none;
+          }
+          50%{
+            transform: rotate(5turn) scale(3,3);
+            color:white;
+          }
+          100%{
+            transform: none;
+            color:gray;
+          }
+        }
+
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container1">
+      <div class="box1">1</div>
+      <div class="box1">2</div>
+      <div class="box1">3</div>
+      <div class="box1">4</div>
+    </div>
+
+    <div class="container2">
+      <div class="box2" id="rotate"></div>
+      <div class="box2" id="skew"></div>
+    </div>
+
+    <div class="container3">
+      <div class="box3">Gae Jaji</div>
+      <div class="box3">Gae Jaji2</div>
+    </div>
+
+  </body>
+</html>
